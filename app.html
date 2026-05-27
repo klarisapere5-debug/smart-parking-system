@@ -1,0 +1,24 @@
+<div class="page">
+  <h1>Klarisa Parking App</h1>
+
+  <p class="count">Total Parking Locations: {{ parkingSpots.length }}</p>
+
+  <div class="grid">
+    <div class="card" *ngFor="let parking of parkingSpots">
+      <h2>{{ parking.name }}</h2>
+
+      <p class="address">{{ parking.address }}</p>
+
+      <div class="tags">
+        <span *ngFor="let item of parking.amenities">
+          {{ item }}
+        </span>
+      </div>
+
+      <img
+        [src]="parking.imgUrl"
+        alt="Parking image"
+      />
+    </div>
+  </div>
+</div>
